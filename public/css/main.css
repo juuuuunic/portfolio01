@@ -1,0 +1,261 @@
+/*************** 초기화 ****************/
+
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+
+html, body {
+	margin: 0; 
+	padding: 0; 
+	font-size:14px; 
+	color:#222; 
+	box-sizing: border-box; 
+	font-family: 'Noto Sans KR', sans-serif;
+	height:100%; 
+	font-weight:300;}
+h1, h2, h3, h4, h5, h6, p, span  {margin: 0; padding: 0; font-weight: 300;}
+div, ul, li, ol, dl, dd, dt{margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+table {margin:0; padding:0; border-collapse:collapse;}
+th, td {margin:0; padding:0;}
+
+a {text-decoration:none; color: inherit;}
+
+.hand {cursor:pointer;}
+.clear {clear:both;}
+.clear:after {clear:both; content:""; display: block;}
+.img {width:100%;}
+.hover:hover {opacity:0.8;}
+.bold {font-weight: 500;}
+.eng {font-family: 'Josefin Sans', sans-serif; font-weight: 500;}
+.tit {font-family: 'Yeon Sung', cursive;}
+.wrap {width: 100%; height: 100%;}
+
+section:not(#intro) {display:none;}
+#modal {z-index:9999; position: fixed;}
+.bg {width: 45%; position: absolute; top: 130%; right: 0;}
+
+/*************** nav ****************/
+.iphone_nav {	
+	width: 22%;
+	position: fixed;
+	bottom: -20%; 
+	right: 50%;
+	-webkit-transform:translate(50%, 20%);
+	-moz-transform:translate(50%, 20%);
+	-o-transform:translate(50%, 20%);
+	transform:translate(50%, 20%);
+	z-index: 999;
+}
+.sign_bt{
+	position: absolute;
+	left: 50%;
+	bottom: 55%;
+	-webkit-transform:translate(-50%, -45%);
+	-moz-transform:translate(-50%, -45%);
+	-o-transform:translate(-50%, -45%);
+	transform:translate(-50%, -45%);
+	z-index: 10;
+	width: 30%; 
+	height: 5%; 
+	border: 0; 
+	border-radius: 10px; 
+	background-color: #ffcd16;
+	font-size: 1vw;
+	cursor:pointer;
+}
+.sign_bt:hover {background-color: #333; color: #ffcd16; font-weight: bold;}
+.cls_iphone {width:50%; height:8%; background:rgba(0,0,0,0); position:absolute; bottom:5%; left:25%; z-index:1000; cursor:pointer;}
+
+
+.nav {
+	width: 96%; 
+	height: 98%; 
+	color: #fff; 
+	background-color: rgba(82, 68, 62, .7);
+	position: absolute;
+	top: 0; 
+	left: 50%;
+	border-radius: 0 0 10% 10%;
+	-webkit-transform:translate(-50%, 0);
+	-moz-transform:translate(-50%, 0);
+	-o-transform:translate(-50%, 0);
+	transform:translate(-50%, 0);
+	display: none;}
+.nav > div {
+	width: 100%;
+    height: 73%;
+    margin: 0 auto;
+    position: absolute;
+    bottom:0;
+    padding: 42% 15%;
+}
+.nav > div > :nth-child(1) {background-color: #ffcd16; width: 30%; height: 2px; float: left; margin-top:11%;}
+.nav > div > :nth-child(2) {float:right; cursor: pointer; width:60%; padding-left:10%;}
+.nav > div > :nth-child(2) > h2 {font-size: 2vw; margin-bottom: 40%;}
+.nav > div > :nth-child(2) > h3 {font-size: 1vw; font-weight: 300; margin-bottom: 20%;}
+.nav > div > :nth-child(2) > h3:after{
+	width: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content:"";
+	/*장면전환을 주기 위한 애니메이션 부분*/
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	transition:all 0.5s ease;
+	/*a 안에서의 애니메이션 부분은 오브젝트보다*/
+	z-index:-1;
+	border-radius: 0 0 10% 10%;
+}
+/*마우스가 올라갔을 때 발생띘는 애니메이션 화면을 rn조 안엝서 다른 색으로 변경한 부분*/
+.nav > div > :nth-child(2) > h3:nth-child(2):hover:after{width:100%; background-color: #ffcd16;}
+.nav > div > :nth-child(2) > h3:nth-child(3):hover:after{width:100%; background-color: #3e95ce;}
+.nav > div > :nth-child(2) > h3:last-child:hover:after{width:100%; background-color: #00be65;}
+/*.nav > h4 {text-align: center; margin-bottom: 1.5rem; font-weight: 300;} 
+.nav > h4 > strong {font-size: 1.2em; margin-right: 1rem;} */
+
+body {background-color: #f9f9fb;}
+
+/*************** intro ****************/
+#intro {
+	background-image:url("../img/ejunhee/intro/sky.png"); 
+	background-repeat:no-repeat; 
+	background-size: cover; 
+	background-position:center center; 
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.banner{width:100%; height: 100%; position: relative;}
+.title {width: 5%; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -25%);}
+.tit_box {position: absolute;}
+.tit {font-size: 1.2vw; letter-spacing: 2px; text-align: center; padding-top: 30%;}
+.tit > span {display: block;}
+
+
+.banner .cloud{top:0; left:0; width:5440px; height:100%; background-image:url("../img/ejunhee/intro/could.png"); z-index:9;}
+
+/*************** main ****************/
+#main {height: 33.5vw; background-color: #fff; position: relative;}
+/*.site_left*/
+.site_left {width: 45%; height: 100%; float: left; display: table;}
+.site_left > ul {display: table-cell; vertical-align: middle;}
+.tit_line {width: 100%; cursor: pointer; padding-bottom: 1.5rem; box-sizing: border-box;}
+.tit_line > h3 {width: 20%; font-size: .8vw; font-weight: 600; letter-spacing: 1px; margin: 0 auto; position: relative; top: -13px;}
+/*.site_right*/
+.site_right {width: 60%; height: 37vw; background-color: #3e7cce; border-radius: 1%; top: -5%; right: -5%; position: absolute; z-index: 16;}
+.site_right > h5 {font-size: .8vw; font-weight:600; color: #fff; letter-spacing: 2px; margin: .4% 0 0 1.5%;}
+.cards {width: 100%; height: 52%; opacity:0; display:none; position: absolute; top: 20%; left: -20%;}
+.card {position: absolute; overflow: hidden;}
+.card > img:hover {animation-name: cardAni; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out}
+@keyframes cardAni {
+	0% {transform: scale(1);}
+	100% {transform: scale(1.1);}
+}
+.cards > :first-child {width: 65%; height: 130%;}
+.cards > :nth-child(2) {width: 18%; top: 0; right: 16%;}
+.cards > :nth-child(3) {width: 18%; top: 40%; right: 16%;}
+.cards > :nth-child(4) {width: 18%; bottom: -17%; right: 16%;}
+.cards > a {
+	color: #fff; 
+	letter-spacing: 2px;
+	position: absolute;
+    bottom: -31%;
+    right: 25%;
+	z-index: 999;
+	font-weight: 500;
+	font-size: .8vw;
+}
+#cards3 > .card {top: 0;}
+#cards3 video {width: 100%; position: relative; z-index: 1;}
+#cards3 .weather {width: 100%; position: absolute; top: 0; z-index: 10;}
+#cards3 .weather > :first-child {color: #222; font-size: 1.2vw; text-align: center; font-weight: bold; padding: 10% 0 3.5%;}
+.daily{text-align: center;}
+.dl_icon{width: 80%; max-width: 250px;}
+.dl_area > span {display: block;}
+.dl_area > :first-child {font-size: 1vw; color: #ffc116;}
+.dl_area button {margin: 1% 0; border: 0; background-color: #fff; color: #222;}
+.dl_date{font-size: 1vw; color: rgb(66, 66, 66);}
+.dl_temp{font-size: 1.3vw; font-weight: 500; color: rgb(8, 52, 102);}
+.dl_desc{font-size: 1.2vw; color: #ffcd16;}
+.wk_area{font-size: 1.25em;  color: rgb(2, 39, 95); font-weight: bold;}
+.wk_date{font-size: 1.25em;  color: rgb(66, 66, 66);}
+.wk_temp{font-size: 1.2vw;  color: rgb(8, 52, 102);}
+.wk_desc{font-size: 1.25em;  color: rgb(177, 177, 177);}
+
+.tab_active{background-color: rgb(3, 112, 185); color: #fff;}
+.tab_disables{background-color: rgb(202, 216, 226); color: #666;}
+
+/*************** portfolio ****************/
+#portfolio {width: 60%; margin: 0 auto; padding-top: 10%; }
+.about > div > h1 {font-size: 1.5vw; color: #555; font-weight: 700;}
+.about_txt > h1 > span {display: block; font-weight: 700;}
+.about_txt > h3 {font-size: .85vw; margin: 1.5% 0 4%;}
+.about_txt > h3 > span {display: block; color: #999; margin-bottom: .3%;}
+
+.ejunhee > div {float: left;}
+.ejunhee > div > h3 {margin-bottom: 1rem;}
+.ejunhee > :first-child {color: #3e95ce; margin-right: 2.5rem;}
+.ejunhee > :first-child > h3 {font-size: .8vw; font-weight: 500; line-height: 2.5vw; text-align: center; border: 1px solid #3e95ce; border-radius: 50%;}
+.ejunhee > :last-child {color: #999;}
+.ejunhee > :last-child > h3 {font-size: .76vw; line-height: 2.54vw; font-weight: 500;}
+
+.about_skills {padding-top: 15%;}
+.about_skills > h1 {font-size: 1.5vw !important;}
+.about_skills > h3 {width: 12%; padding: .5% 1%; font-size: .8vw;  color: #fff; font-weight: 500; text-align: center; background-color: #f94b71; border-radius: 6px; margin: 2% 0;}
+.about_skills > h3:hover {background-color: #dd3055}
+.chart_box {color: #fff;}
+.chart_box:before {   
+	content: "";
+	display: block;
+	width: 1px;
+    height: 140px;
+    background-color: #3e95ce;
+    margin-left: 5%;
+}
+.charts {margin-top: 2rem;}
+.charts > div {width: 33.0%; float: left;}
+.chart_wrap:nth-child(4), .chart_wrap:nth-child(5) {padding-top: 5rem;}
+.charts > div > h1{color: #222; font-size: 1vw; text-align: center; font-weight: 500; margin-top: 2rem; z-index: 10;}
+
+/*************** more ****************/
+#more {width: 60%; margin: 0 auto; padding-top: 10%;}
+#more > h1 {text-align: center; font-size: 1.5vw; color: #555; font-weight: 700; margin-bottom: 5%}
+#more > div {margin-bottom: 2%; position: relative;}
+.more_bott {width: 89%; font-size: .8vw;}
+.more_bott h1 {font-size: 1vw; font-weight: 600; margin-bottom:3%;}
+.more_img {width: 45%;}
+.more_txt {width: 50%;}
+.more_top {width: 20%;}
+/*1, 3*/
+.txt_rt {position: absolute; top: 5%; right: 7%;}
+.txt_rt .more_bott {
+    text-align: justify;
+    position: absolute;
+    top: 15%;
+    right: -12%;}
+/*2, 4*/
+.img_rt {float: right;}
+.txt_li {text-align: right; position: absolute; top: 5%; left: 7%;}
+.txt_li .more_bott {position: absolute; top: 15%; left: -13%;}
+
+
+/*************** footer ****************/
+.footer {padding: 2% 0; margin-top:2rem;}
+.footer ul {width: 95%; margin: 0 auto;}
+.footer li {float: left;}
+.footer > ul > :first-child {width: 90%; float: left;}
+.footer > ul > :first-child h3 {font-size: 1.5rem;}
+.footer > ul > :first-child p {display: inline-block; font-size: .7vw; font-weight:500; background-color: #999; padding: .2% .5%; margin-top: 1rem;}
+.footer > ul > :last-child {width: 10%; float: right; text-align: right; margin-top: 1%;}
+.footer > ul > :last-child img {width: 20%;}
+
+
+@media screen and (max-width:1260px) {
+	#portfolio {width: 70%;}
+	.tit_line > h3 {top: -7px;}
+	.cards > a {right: 24%;}
+	.chart_box:before {height: 110px;}
+	#more {width: 70%}
+}
